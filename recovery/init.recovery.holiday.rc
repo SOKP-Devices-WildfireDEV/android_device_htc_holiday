@@ -11,10 +11,8 @@ on init
 
     mkdir /boot
     mkdir /recovery
-    mkdir /sdcard
     mkdir /internal_sd
     mkdir /external_sd
-    mkdir /sd-ext
     mkdir /datadata
     mkdir /emmc
     mkdir /system
@@ -81,13 +79,9 @@ service power_test /sbin/power_test
 
 service offmode_charging /sbin/offmode_charging
     disabled
-    oneshot
 
 service detect_key /sbin/detect_key
     disabled
-    oneshot
-
-service htcbatt /sbin/htcbatt
     oneshot
 
 service adbd /sbin/adbd recovery
